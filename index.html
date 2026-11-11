@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTPkmn Quiz · Pokémon e Dragões</title>
+  <meta name="theme-color" content="#1b1745">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Lilita+One&family=M+PLUS+Rounded+1c:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-tela="inicio">
+  <!-- Céu: estrelas, aurora e o fiorde -->
+  <div class="ceu" aria-hidden="true">
+    <div class="estrelas"></div>
+    <div class="aurora"><i></i><i></i><i></i></div>
+    <svg class="fiorde" viewBox="0 0 1440 260" preserveAspectRatio="none">
+      <path class="m3" d="M0 170 L120 120 L210 150 L330 80 L430 140 L560 95 L700 150 L820 70 L930 130 L1060 90 L1180 140 L1300 100 L1440 130 V260 H0Z"/>
+      <path class="m2" d="M0 200 L90 160 L200 190 L300 140 L420 185 L540 150 L650 195 L780 135 L900 185 L1010 155 L1130 195 L1250 150 L1360 180 L1440 165 V260 H0Z"/>
+      <path class="m1" d="M0 230 L140 205 L260 225 L400 200 L520 228 L660 210 L800 232 L940 208 L1080 230 L1220 212 L1340 228 L1440 218 V260 H0Z"/>
+    </svg>
+  </div>
+
+  <header class="topo">
+    <a href="#" class="logo" aria-label="HTPkmn Quiz, voltar ao menu">
+      <img class="marca" src="img/logo.png" alt="" width="40" height="40">
+      <span>HTPkmn <b>Quiz</b></span>
+    </a>
+    <button id="btnConfig" class="btn-sec pequeno">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M18 7h2M4 17h3M12 17h8"/><circle cx="15.5" cy="7" r="2.3"/><circle cx="9.5" cy="17" r="2.3"/></svg>
+      Filtros
+    </button>
+  </header>
+
+  <main id="palco"></main>
+
+  <div id="carregando" class="carregando">
+    <img class="giro-logo" src="img/logo.png" alt="" width="84" height="84">
+    <p>Abrindo a Pokédex… só demora na primeira vez.</p>
+    <div class="barra"><i></i></div>
+    <div class="acoes">
+      <button class="btn tentar" hidden>Tentar de novo</button>
+      <button class="btn-sec seguir" hidden>Jogar só com dragões</button>
+    </div>
+  </div>
+
+  <dialog id="dlgConfig">
+    <h3>Filtros</h3>
+    <div class="corpo"></div>
+    <div class="acoes fim-dlg">
+      <button class="btn-sec" onclick="this.closest('dialog').close()">Cancelar</button>
+      <button class="btn salvar">Salvar filtros</button>
+    </div>
+  </dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <footer>
+    Projeto de fã, sem fins lucrativos. Pokémon é marca da Nintendo, Game Freak e The Pokémon Company.
+    Como Treinar o Seu Dragão é da DreamWorks Animation e de Cressida Cowell.
+    Dados da <a href="https://pokeapi.co" target="_blank" rel="noopener">PokéAPI</a> e da
+    <a href="https://howtotrainyourdragon.fandom.com" target="_blank" rel="noopener">HTTYD Wiki</a>.
+  </footer>
+
+  <script src="js/util.js"></script>
+  <script src="js/dados-pokemon.js"></script>
+  <script src="js/dados-dragoes.js"></script>
+  <script src="js/termo.js"></script>
+  <script src="js/silhueta.js"></script>
+  <script src="js/dicas.js"></script>
+  <script src="js/japones.js"></script>
+  <script src="js/pokedex.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
